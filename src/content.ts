@@ -373,22 +373,23 @@ export const PLANS: Plan[] = [
   },
   {
     name: 'Growth',
-    price: '$1,200',
+    price: '$1,500',
     cadence: '/ month',
     pitch: 'A steady creative pipeline for brands testing every week.',
-    features: ['20 ad edits per month', 'Hook variants included', '48h turnaround', '2 revision rounds per edit', 'Weekly performance review'],
+    features: ['30 videos per month (10 concepts × 3 hooks)', '48h turnaround', '2 revision rounds per video', 'Weekly performance review', '+$25 per winning ad'],
     highlight: true,
   },
   {
     name: 'Scale',
-    price: '$2,200',
+    price: '$2,800',
     cadence: '/ month',
     pitch: 'High-volume testing with AI creative built in.',
-    features: ['40 ad edits per month', 'AI avatars, AI UGC & AI B-roll', 'Priority 24–48h turnaround', '3 revision rounds per edit', 'Iteration on your ad data'],
+    features: ['60 videos per month (20 concepts × 3 hooks)', 'AI avatars, AI UGC & AI B-roll', 'Priority 24–48h turnaround', '3 revision rounds per video', 'Iteration on your ad data', '+$25 per winning ad'],
   },
 ];
 
-export const PRICING_NOTE = 'AI generation credits are billed at cost. Custom volumes and retainers available.';
+export const PRICING_NOTE =
+  'A video is one finished export; each hook variant counts as one. A winning ad is one you scale after testing, judged by your own ad data. AI generation credits are billed at cost. Custom volumes available.';
 
 export const TOOLS = {
   edit: ['Premiere Pro', 'After Effects', 'DaVinci Resolve', 'CapCut', 'Audition', 'Frame.io'],
