@@ -151,7 +151,7 @@ export default function FinalPass() {
                 href={FP_DOWNLOAD_URL}
                 className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/20 py-3 text-sm transition-colors hover:bg-white/10"
               >
-                <Download className="h-4 w-4" /> Download v{FP_VERSION} (213 MB)
+                <Download className="h-4 w-4" /> Download v{FP_VERSION} (226 MB)
               </a>
             </div>
             <div className="rounded-2xl border border-accent bg-accent/[0.06] p-6 md:p-8">

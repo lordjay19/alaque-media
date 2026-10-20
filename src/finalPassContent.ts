@@ -1,12 +1,12 @@
 /** Copy, price and links for the Final Pass product page. Edit here to change the page. */
 import { CONTACT_EMAIL } from './content';
 
-export const FP_VERSION = '1.0.3';
+export const FP_VERSION = '1.0.4';
 export const FP_PRICE = '$25';
 
 /** Free version download. Points at the GitHub release once it is published. */
 export const FP_DOWNLOAD_URL =
-  'https://github.com/lordjay19/alaque-media/releases/download/final-pass-v1.0.3/FinalPass-1.0.3-win64.zip';
+  'https://github.com/lordjay19/alaque-media/releases/download/final-pass-v1.0.4/FinalPass-1.0.4-win64.zip';
 
 /** Payment: buyer pays by PayPal or Wise, then emails the licence name; the key is sent back by hand. */
 export const FP_PAYPAL_URL = 'https://paypal.me/rudetae19/25USD';
