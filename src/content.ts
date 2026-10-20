@@ -15,6 +15,7 @@ export const NAV_ITEMS = [
   { label: 'Services', href: '#services' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'FAQ', href: '#faq' },
+  { label: 'Final Pass', href: 'final-pass/' },
 ];
 
 export const HERO = {
