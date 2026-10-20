@@ -5,12 +5,14 @@ import {
   ABOUT,
   FAQ,
   HOOK_LAB,
+  PAYPAL_URL,
   PLANS,
   PRICING_NOTE,
   PROCESS,
   SERVICES,
   STATS,
   TOOLS,
+  WISE_URL,
 } from '../content';
 
 function SectionTitle({ kicker, title }: { kicker: string; title: string }) {
@@ -143,6 +145,18 @@ export function Pricing() {
               >
                 Get started
               </a>
+              {plan.payAmountUsd && (
+                <p className="mt-3 text-center text-xs text-muted">
+                  or pay ${plan.payAmountUsd} now:{' '}
+                  <a href={`${PAYPAL_URL}/${plan.payAmountUsd}USD`} target="_blank" rel="noopener noreferrer" className="text-cream underline underline-offset-2 hover:text-accent">
+                    PayPal
+                  </a>{' '}
+                  ·{' '}
+                  <a href={WISE_URL} target="_blank" rel="noopener noreferrer" className="text-cream underline underline-offset-2 hover:text-accent">
+                    Wise
+                  </a>
+                </p>
+              )}
             </div>
           ))}
         </div>

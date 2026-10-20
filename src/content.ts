@@ -9,6 +9,10 @@ export const asset = (p: string) => `${import.meta.env.BASE_URL}${p}`;
 
 export const CONTACT_EMAIL = 'lordjayplatero19@gmail.com';
 
+/** Payment links (public "send me money" links; no account details). */
+export const PAYPAL_URL = 'https://paypal.me/rudetae19';
+export const WISE_URL = 'https://wise.com/pay/me/jaylordp4';
+
 export const NAV_ITEMS = [
   { label: 'Work', href: '#work' },
   { label: 'Hooks', href: '#hooks' },
@@ -362,6 +366,8 @@ export interface Plan {
   pitch: string;
   features: string[];
   highlight?: boolean;
+  /** One-off plans can be paid upfront; the amount is pre-filled on PayPal. */
+  payAmountUsd?: number;
 }
 
 export const PLANS: Plan[] = [
@@ -371,6 +377,7 @@ export const PLANS: Plan[] = [
     cadence: 'one-off',
     pitch: 'See the work on your own footage before committing.',
     features: ['1 ad concept + 3 hook variants', '72h turnaround', '1 revision round', 'Meta + TikTok exports'],
+    payAmountUsd: 150,
   },
   {
     name: 'Growth',
@@ -390,7 +397,7 @@ export const PLANS: Plan[] = [
 ];
 
 export const PRICING_NOTE =
-  'A video is one finished export; each hook variant counts as one. A winning ad is one you scale after testing, judged by your own ad data. AI generation credits are billed at cost. Custom volumes available.';
+  'A video is one finished export; each hook variant counts as one. A winning ad is one you scale after testing, judged by your own ad data. AI generation credits are billed at cost. Custom volumes available. Payments by PayPal or Wise; monthly plans are invoiced.';
 
 export const TOOLS = {
   edit: ['Premiere Pro', 'After Effects', 'DaVinci Resolve', 'CapCut', 'Audition', 'Frame.io'],

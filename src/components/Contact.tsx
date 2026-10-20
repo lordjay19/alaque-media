@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { CONTACT_EMAIL, NEEDS, VOLUMES } from '../content';
+import { CONTACT_EMAIL, NEEDS, PAYPAL_URL, VOLUMES, WISE_URL } from '../content';
 
 const field =
   'w-full rounded-xl border border-white/15 bg-white/[0.03] px-4 py-3 text-sm text-cream placeholder:text-muted/70 focus:border-accent focus:outline-none';
@@ -44,6 +44,17 @@ export default function Contact() {
           >
             {CONTACT_EMAIL}
           </a>
+          <p className="mt-6 text-sm text-muted">
+            Paying an invoice?{' '}
+            <a href={PAYPAL_URL} target="_blank" rel="noopener noreferrer" className="text-cream underline underline-offset-4 hover:text-accent">
+              PayPal
+            </a>{' '}
+            or{' '}
+            <a href={WISE_URL} target="_blank" rel="noopener noreferrer" className="text-cream underline underline-offset-4 hover:text-accent">
+              Wise
+            </a>
+            .
+          </p>
         </div>
 
         <form onSubmit={onSubmit} className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:col-span-7">
