@@ -2,15 +2,17 @@ import { useState } from 'react';
 import { ArrowLeft, Check, Download, Plus, ShieldCheck } from 'lucide-react';
 import { asset } from './content';
 import {
-  FP_BUY_URL,
   FP_CHECKS,
   FP_DOWNLOAD_URL,
   FP_FAQ,
   FP_HERO,
+  FP_LICENCE_EMAIL_URL,
+  FP_PAYPAL_URL,
   FP_POINTS,
   FP_PRICE,
   FP_STEPS,
   FP_VERSION,
+  FP_WISE_URL,
 } from './finalPassContent';
 
 /** Asset paths are relative to the site root; this page lives one folder down. */
@@ -56,7 +58,7 @@ export default function FinalPass() {
                   <Download className="h-4 w-4" /> Download free
                 </a>
                 <a
-                  href={FP_BUY_URL}
+                  href="#get"
                   className="rounded-full border border-white/20 px-5 py-3 text-sm text-cream transition-colors hover:bg-white/10"
                 >
                   Buy licence · {FP_PRICE}
@@ -165,13 +167,31 @@ export default function FinalPass() {
                   </li>
                 ))}
               </ul>
-              <a
-                href={FP_BUY_URL}
-                className="mt-8 block rounded-full bg-cream py-3 text-center text-sm font-medium text-black transition-colors hover:bg-white"
-              >
-                Buy licence
-              </a>
-              <p className="mt-3 text-xs text-muted">Licence key sent by email, usually within 24 hours.</p>
+              <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <a
+                  href={FP_PAYPAL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block rounded-full bg-cream py-3 text-center text-sm font-medium text-black transition-colors hover:bg-white"
+                >
+                  Pay $25 with PayPal
+                </a>
+                <a
+                  href={FP_WISE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block rounded-full border border-white/20 py-3 text-center text-sm font-medium text-cream transition-colors hover:bg-white/10"
+                >
+                  Pay $25 with Wise
+                </a>
+              </div>
+              <p className="mt-4 text-xs leading-relaxed text-muted">
+                After paying,{' '}
+                <a href={FP_LICENCE_EMAIL_URL} className="text-cream underline underline-offset-2 hover:text-accent">
+                  email me
+                </a>{' '}
+                the name you want on the licence. Your key arrives by email, usually within 24 hours.
+              </p>
             </div>
           </div>
 

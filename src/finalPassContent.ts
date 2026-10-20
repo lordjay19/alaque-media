@@ -8,11 +8,14 @@ export const FP_PRICE = '$25';
 export const FP_DOWNLOAD_URL =
   'https://github.com/lordjay19/alaque-media/releases/download/final-pass-v1.0.3/FinalPass-1.0.3-win64.zip';
 
-/** No payment platform yet: buying starts an email; the licence key is sent back by hand. */
-export const FP_BUY_URL = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-  'Final Pass licence',
+/** Payment: buyer pays by PayPal or Wise, then emails the licence name; the key is sent back by hand. */
+export const FP_PAYPAL_URL = 'https://paypal.me/rudetae19/25USD';
+export const FP_WISE_URL = 'https://wise.com/pay/me/jaylordp4';
+
+export const FP_LICENCE_EMAIL_URL = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+  'Final Pass licence - paid',
 )}&body=${encodeURIComponent(
-  'Hi Jay,\n\nI would like a Final Pass licence ($25).\n\nName to show on the licence: \n\nThanks!',
+  'Hi Jay,\n\nI just paid $25 for a Final Pass licence via [PayPal / Wise].\n\nName to show on the licence: \nPayment name or email: \n\nThanks!',
 )}`;
 
 export const FP_HERO = {
@@ -54,5 +57,5 @@ export const FP_FAQ = [
   { q: 'Does it work on Mac?', a: 'No, Windows 10 and 11 only.' },
   { q: 'Does it fix problems?', a: "No. It flags, you decide. Some flags are intentional (a held still on screen), so each one shows you exactly where to look." },
   { q: 'Which languages does the typo check support?', a: 'English only for now. Brand names and slang can be added to an allow-list in Settings so they are never flagged.' },
-  { q: 'How do I get my licence?', a: 'Click Buy, send the email, and pay by the method I reply with. Your licence key arrives by email, usually within 24 hours.' },
+  { q: 'How do I get my licence?', a: `Pay $25 by PayPal or Wise, then email ${CONTACT_EMAIL} with the name you want on the licence. Your licence key arrives by email, usually within 24 hours.` },
 ];
