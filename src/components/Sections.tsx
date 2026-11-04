@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowUpRight, Check, Plus } from 'lucide-react';
+import { Check, Plus } from 'lucide-react';
 import LoopVideo from './LoopVideo';
 import {
   ABOUT,
@@ -9,12 +9,10 @@ import {
   PLANS,
   PRICING_NOTE,
   PROCESS,
-  REVIEWER,
   SERVICES,
   STATS,
   TOOLS,
   WISE_URL,
-  asset,
 } from '../content';
 
 function SectionTitle({ kicker, title }: { kicker: string; title: string }) {
@@ -82,42 +80,6 @@ export function Process() {
             </li>
           ))}
         </ol>
-      </div>
-    </section>
-  );
-}
-
-export function Reviewer() {
-  return (
-    <section id="reviewer" className="px-4 py-16 md:px-6 md:py-24">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-12">
-        <div className="lg:col-span-5">
-          <SectionTitle kicker={REVIEWER.kicker} title={REVIEWER.title} />
-          <p className="mt-6 max-w-md text-base leading-relaxed text-cream/70">{REVIEWER.body}</p>
-          <ul className="mt-6 space-y-2">
-            {REVIEWER.checks.map((c) => (
-              <li key={c} className="flex items-start gap-2 text-sm text-cream/80">
-                <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden />
-                {c}
-              </li>
-            ))}
-          </ul>
-          <a
-            href={asset(REVIEWER.cta.href)}
-            className="mt-8 inline-flex items-center gap-1.5 rounded-full border border-white/20 px-5 py-2.5 text-sm text-cream transition-colors hover:border-accent hover:text-accent"
-          >
-            {REVIEWER.cta.label}
-            <ArrowUpRight className="h-4 w-4" aria-hidden />
-          </a>
-        </div>
-        <div className="lg:col-span-7">
-          <img
-            src={asset(REVIEWER.image)}
-            alt={REVIEWER.imageAlt}
-            loading="lazy"
-            className="w-full rounded-2xl border border-white/10"
-          />
-        </div>
       </div>
     </section>
   );

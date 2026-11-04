@@ -1,7 +1,7 @@
 import Hero from './components/Hero';
 import Work from './components/Work';
 import Contact from './components/Contact';
-import { Faq, HookLab, Pricing, Process, Reviewer, Services, Stats, Studio } from './components/Sections';
+import { Faq, HookLab, Pricing, Process, Services, Stats, Studio } from './components/Sections';
 
 export default function App() {
   return (
@@ -11,7 +11,6 @@ export default function App() {
       <Work />
       <HookLab />
       <Process />
-      <Reviewer />
       <Services />
       <Pricing />
       <Studio />
