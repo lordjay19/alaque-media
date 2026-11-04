@@ -341,9 +341,19 @@ export const HOOK_LAB = {
 export const PROCESS = [
   { n: '01', title: 'Brief & footage', body: 'Send the brief, creator footage or a script. No footage? We build it with AI avatars, AI UGC and AI B-roll.' },
   { n: '02', title: 'Body + hooks', body: 'We cut the body, then three hook variants on top. Captions, safe zones and exports to spec for Meta and TikTok.' },
-  { n: '03', title: 'Review & revise', body: 'Every cut is self-reviewed against a QC checklist before you see it. Revisions turned around within 24 hours.' },
+  { n: '03', title: 'Review & revise', body: 'Every cut is scanned by Final Pass, my own QC reviewer, then checked by eye before you see it. Revisions turned around within 24 hours.' },
   { n: '04', title: 'Scale the winners', body: 'Share your weekly ad ranking. We study what won and build the next round from it.' },
 ];
+
+export const REVIEWER = {
+  kicker: 'Built in-house',
+  title: 'Every ad passes my own reviewer before it reaches you.',
+  body: 'Final Pass is the QC app I built for my weekly ad deliveries. It reads every caption burned into the video and scans each export for the mistakes eyes skip after hours on a cut.',
+  checks: ['Typos in burned-in captions', 'Flash frames and black screens', 'Frozen shots', 'Audio gaps', 'Loudness vs -14 LUFS'],
+  image: 'final-pass/app-results.jpg',
+  imageAlt: 'Final Pass showing three scanned videos, with a loudness flag and a caption typo on the selected one',
+  cta: { label: 'See Final Pass', href: 'final-pass/' },
+};
 
 export interface Service {
   title: string;
