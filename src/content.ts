@@ -89,6 +89,7 @@ export const PROJECTS: Project[] = [
     category: 'AI avatar & AI UGC',
     description: 'AI-generated doctor demonstrating on a hip model in his clinic, with AI anatomy and senior lifestyle scenes for every line, closing on the real product demo.',
     aspect: '9/16',
+    featured: true,
   },
   {
     id: 'brace-doctor-quiz',
@@ -107,24 +108,7 @@ export const PROJECTS: Project[] = [
     category: 'AI avatar & AI UGC',
     description: "Trial edit recreating the brand's winning ad in an AI skeleton style: AI talking characters, new B-roll and captions, one body with three hooks.",
     aspect: '9/16',
-  },
-  {
-    id: 'sleep-trial-hook2',
-    ...w('sleep-trial-hook2'),
-    title: 'Skeleton-Style AI Ad, Hook 2',
-    client: 'Anti-snoring sleep brand (hiring trial)',
-    category: 'AI avatar & AI UGC',
-    description: 'Same AI body with a second opening hook, ready for a hook test.',
-    aspect: '9/16',
-  },
-  {
-    id: 'sleep-trial-hook3',
-    ...w('sleep-trial-hook3'),
-    title: 'Skeleton-Style AI Ad, Hook 3',
-    client: 'Anti-snoring sleep brand (hiring trial)',
-    category: 'AI avatar & AI UGC',
-    description: 'Same AI body with a third opening hook.',
-    aspect: '9/16',
+    featured: true,
   },
   {
     id: 'health-avatar',
