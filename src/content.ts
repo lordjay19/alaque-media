@@ -101,8 +101,8 @@ export const PROJECTS: Project[] = [
     aspect: '9/16',
   },
   {
-    id: 'sleep-trial-hook2',
-    ...w('sleep-trial-hook2'),
+    id: 'sleep-trial-hook1',
+    ...w('sleep-trial-hook1'),
     title: 'Skeleton-Style AI Ad',
     client: 'Anti-snoring sleep brand (hiring trial)',
     category: 'AI avatar & AI UGC',
